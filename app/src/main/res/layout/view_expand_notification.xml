@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="8dp">
+
+    <RelativeLayout
+        android:id="@+id/icon_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/circle_shape_grey_filled"
+            android:text="H"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:textColor="@color/green_primary"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/notification_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="false"
+        android:layout_marginTop="3dp"
+        android:layout_toRightOf="@+id/icon_container"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:paddingLeft="6dp">
+
+        <TextView
+            android:id="@+id/content_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hand Sanitizer 10% Off"
+            android:textAppearance="@style/TextAppearance.Compat.Notification.Title"/>
+
+        <TextView
+            android:id="@+id/content_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Expand me to see a detailed message!"
+            android:textAppearance="@style/TextAppearance.Compat.Notification"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/notification_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/icon_container"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/circular_border_grey_border"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_marginTop="4dp"
+            android:layout_width="20dp"
+            android:id="@+id/net_balance_icon"
+            android:layout_height="20dp"
+            android:layout_toStartOf="@id/netbalance"
+            android:src="@drawable/ic_receipt"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Net Balance : "
+            android:id="@+id/netbalance"
+            android:padding="4dp"
+            android:layout_centerHorizontal="true"
+            android:textAlignment="viewEnd"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" ₹ 1526"
+            android:textStyle="bold"
+            android:padding="4dp"
+            android:textColor="@color/red_primary"
+            android:id="@+id/amount"
+            android:layout_toEndOf="@id/netbalance"
+            android:textAlignment="viewEnd"/>
+
+        <ImageView
+            android:layout_marginTop="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/horizontal_view"
+            android:src="@drawable/verticle_dotted_line"
+            android:layout_below="@id/net_balance_icon"/>
+
+        <ImageView
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:id="@+id/top_arrow"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_below="@id/horizontal_view"
+            android:layout_toStartOf="@id/tv_payment"
+            android:src="@drawable/ic_receipt" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_centerInParent="true"
+            android:layout_height="0dp"
+            android:id="@+id/tv_centre"/>
+
+        <TextView
+            android:layout_marginTop="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" ₹1526"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimaryDark"
+            android:id="@+id/tv_payment_amount"
+            android:layout_below="@id/horizontal_view"
+            android:layout_toStartOf="@id/tv_centre"
+            android:textAlignment="viewEnd"/>
+
+        <TextView
+            android:layout_marginTop="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Payment:"
+            android:layout_below="@id/horizontal_view"
+            android:layout_toStartOf="@id/tv_payment_amount"
+            android:id="@+id/tv_payment"
+            android:textAlignment="viewEnd"/>
+
+
+        <ImageView
+            android:layout_marginTop="8dp"
+            android:id="@+id/down_arrow"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="8dp"
+            android:layout_below="@id/horizontal_view"
+            android:layout_toEndOf="@id/tv_centre"
+            android:src="@drawable/ic_receipt" />
+
+        <TextView
+            android:layout_marginTop="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Credit :"
+            android:layout_below="@id/horizontal_view"
+            android:layout_toEndOf="@id/down_arrow"
+            android:id="@+id/tv_credit"
+            android:textAlignment="viewEnd"/>
+
+        <TextView
+            android:layout_marginTop="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" ₹1526"
+            android:textStyle="bold"
+            android:textColor="@color/red_primary"
+            android:id="@+id/tv_credit_amount"
+            android:layout_below="@id/horizontal_view"
+            android:layout_toEndOf="@id/tv_credit"
+            android:textAlignment="viewEnd"/>
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/notification_info"
+        android:layout_centerInParent="true">
+
+        <Button
+            android:id="@+id/left_button"
+            style="@style/Widget.Compat.NotificationActionContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CLICK ME"
+            android:textAppearance="@style/Widget.Compat.NotificationActionText"/>
+
+        <Button
+            android:id="@+id/right_button"
+            style="@style/Widget.Compat.NotificationActionContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CLICK ME"
+            android:textAppearance="@style/Widget.Compat.NotificationActionText"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/timestamp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:paddingRight="3.5dp"
+        android:paddingTop="8dp"
+        android:textAppearance="@style/TextAppearance.Compat.Notification.Time"/>
+
+</RelativeLayout>
